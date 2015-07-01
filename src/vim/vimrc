@@ -1,0 +1,112 @@
+" general setup (paths etc.)
+" ==========================
+execute pathogen#runtime_append_all_bundles()
+
+" basic editing settings for all file types
+" =========================================
+
+filetype plugin indent on
+syntax on
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+let g:changelog_username = "Christian Kauhaus <kc@gocept.com>"
+let $LC_ALL = "en_US.utf8"
+
+" don't outdent hashes
+inoremap # #
+
+" generic key mappings
+map Y y$
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+map <Leader>0 :setl textwidth=80<CR>
+map <Leader>1 :setl textwidth=0<CR>
+map <Leader>2 :setl textwidth=72<CR>
+map <Leader>8 :setl textwidth=78<CR>
+map <Leader>9 :setl textwidth=79<CR>
+map <F2> :set sidescroll=10 nowrap<CR>
+map <F5> :make<CR>
+map <F6> :set paste<CR>
+map <F7> :set nopaste<CR>
+cabbrev vsb vert sb
+
+" generic settings
+set autoindent
+set colorcolumn=+1
+set comments=://,b:#,:%,n:>,fb:-,fb:*
+set complete=.,w,b,u,t,i,k
+set completeopt=menu,preview,longest
+set directory=/tmp,/var/tmp,.
+set foldnestmax=5
+set formatoptions+=2l
+set hidden
+set history=1000
+set hlsearch
+set incsearch
+set list
+set listchars=tab:>·,trail:·,extends:»,precedes:«
+set modeline
+set nojoinspaces
+set statusline=%3n:\ %.40f%(\ [%M%R%W%Y]%)%a%(\ %{getbufvar('',\ 'vcstype')}%)%=%8(%l/%L%)\ %5(%c%V%)\ 0x%-4B\ %3P
+set smartindent
+set suffixes+=.pyc,.pyo,.fls,.pdf,.ps,.url,.idx,.ind,.ilg,.bbl,.blg,.snm,.nav,.toc,.vrb
+set textwidth=80
+set wildmenu
+
+" close preview window automatically when we move around
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" searching & highlighting
+nohls
+
+" GUI (gvim)
+" ==========
+
+if has("gui_running")
+	highlight LineNr guifg=lightgray
+	highlight SpellBad cterm=undercurl
+	set guioptions=fai
+	set number
+	set numberwidth=4
+	set guifont=Inconsolata\ 12,Liberation\ Mono\ 10,Monospace\ 10
+endif
+
+" ditaa
+autocmd BufRead,BufNewFile *.ditaa setlocal ft=ditaa ve=all
+
+
+" configure bundles
+" =================
+
+" TaskList
+map <Leader>td <Plug>TaskList
+
+" pyflakes
+let g:pyflakes_use_quickfix = 0
+
+" PEP8
+let g:pep8_map = '<F8>'
+
+" NERD Tree
+let g:NERDTreeHijackNetrw = 0
+map <Leader>n :NERDTreeToggle<CR>
+
+" Ack
+nmap <leader>a <Esc>:Ack!
+
+" VCSCommand
+let g:VCSCommandDeleteOnHide = 1
+
+" pydiction
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
+py sys.path.append('src')
+
+" snipmate
+ino <silent> <c-tab> <c-r>=TriggerSnippet()<cr>
+snor <silent> <c-tab> <esc>i<right><c-r>=TriggerSnippet()<cr>
+ino <silent> <s-c-tab> <c-r>=BackwardsSnippet()<cr>
+snor <silent> <s-c-tab> <esc>i<right><c-r>=BackwardsSnippet()<cr>
+
+" vim: set sw=8 ts=8 noet:

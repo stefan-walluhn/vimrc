@@ -1,0 +1,45 @@
+execute pathogen#infect()
+filetype plugin indent on
+syntax on
+
+" generic settings
+set autoindent
+set background=light
+set colorcolumn=+1
+set comments=://,b:#,:%,n:>,fb:-,fb:*
+set complete=.,w,b,u,t,i,k
+set completeopt=menu,preview,longest
+set directory=/tmp,/var/tmp,.
+set formatoptions+=2l
+set hidden
+set history=1000
+set hlsearch
+set incsearch
+set list
+set listchars=tab:>·,trail:·,extends:»,precedes:«
+set modeline
+set nofoldenable
+set nojoinspaces
+set number
+set pastetoggle=<F11>
+set smartindent
+set suffixes+=.pyc,.pyo,.fls,.pdf,.ps,.url,.idx,.ind,.ilg,.bbl,.blg,.snm,.nav,.toc,.vrb
+set textwidth=80
+set wildmenu
+
+
+" configure bundles
+" =================
+
+" TaskList
+map <Leader>td <Plug>TaskList
+
+" NERD Tree
+let g:NERDTreeHijackNetrw = 0
+map <Leader>n :NERDTreeToggle<CR>
+
+" pydiction
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
+
+" pyflakes
+"hi SpellBad ctermfg=yellow

@@ -1,0 +1,5 @@
+snippet ctags
+	[hooks]
+	update = ctags -R ${1:dir}
+	post-rebase = ctags -R ${1}
+

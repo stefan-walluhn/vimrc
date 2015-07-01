@@ -1,0 +1,27 @@
+snippet pdb
+	import pdb; pdb.set_trace()
+snippet unittest
+	from ${1:module} import ${2:Class}
+	import unittest
+	
+	
+	class $2Test(unittest.TestCase):
+snippet test_
+	def test_${1:what}(self):
+	    self.assert${2:Equal}
+snippet fix_
+	import fixapi
+	import os
+	import os.path
+	
+	
+	class ${1:FixClass}(fixapi.Fix):
+	    """${2:what this fix is for}"""
+
+	    def is_pending(self):
+	        pass
+
+	    def apply(self):
+	        pass
+snippet ulpf
+	from __future__ import unicode_literals, print_function
