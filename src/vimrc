@@ -21,7 +21,7 @@ set modeline
 set nofoldenable
 set nojoinspaces
 set number
-set pastetoggle=<F11>
+set pastetoggle=<F12>
 set smartindent
 set suffixes+=.pyc,.pyo,.fls,.pdf,.ps,.url,.idx,.ind,.ilg,.bbl,.blg,.snm,.nav,.toc,.vrb
 set textwidth=79
