@@ -1,48 +1,21 @@
-[submodule "bundle/fugitive"]
-	path = src/vim/bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
-[submodule "bundle/snipmate"]
-	path = src/vim/bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
-[submodule "bundle/surround"]
-	path = src/vim/bundle/surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/git"]
-	path = src/vim/bundle/git
-	url = https://github.com/tpope/vim-git.git
-#[submodule "bundle/supertab"]
-#	path = src/vim/bundle/supertab
-#	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/command-t"]
-	path = src/vim/bundle/command-t
-	url = https://github.com/wincent/Command-T.git
-[submodule "bundle/ack"]
-	path = src/vim/bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/pydoc"]
-	path = src/vim/bundle/pydoc
-	url = https://github.com/fs111/pydoc.vim.git
-[submodule "bundle/pep8"]
-	path = src/vim/bundle/pep8
-	url = https://github.com/vim-scripts/pep8.git
-[submodule "bundle/py.test"]
-	path = src/vim/bundle/py.test
-	url = https://github.com/alfredodeza/pytest.vim.git
-[submodule "bundle/tasklist"]
-	path = src/vim/bundle/tasklist
-	url = https://github.com/vim-scripts/TaskList.vim.git
-[submodule "bundle/nerdtree"]
-	path = src/vim/bundle/nerdtree
-	url = https://github.com/vim-scripts/The-NERD-tree.git
-[submodule "bundle/pyflakes"]
-	path = src/vim/bundle/pyflakes
-	url = https://github.com/mitechie/pyflakes-pathogen.git
-[submodule "bundle/vcscommand"]
-	path = src/vim/bundle/vcscommand
-	url = git://repo.or.cz/vcscommand
-[submodule "bundle/ctrlp"]
-	path = src/vim/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
-[submodule "bundle/puppet"]
+[submodule "src/vim/bundle/puppet"]
 	path = src/vim/bundle/puppet
 	url = git://github.com/rodjek/vim-puppet.git
+[submodule "src/vim/bundle/ctrlp"]
+	path = src/vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "src/vim/bundle/pyflakes"]
+	path = src/vim/bundle/pyflakes
+	url = https://github.com/mitechie/pyflakes-pathogen.git
+[submodule "src/vim/bundle/py.test"]
+	path = src/vim/bundle/py.test
+	url = https://github.com/alfredodeza/pytest.vim.git
+[submodule "src/vim/bundle/pep8"]
+	path = src/vim/bundle/pep8
+	url = https://github.com/vim-scripts/pep8.git
+[submodule "src/vim/bundle/pydoc"]
+	path = src/vim/bundle/pydoc
+	url = https://github.com/fs111/pydoc.vim.git
+[submodule "src/vim/bundle/git"]
+	path = src/vim/bundle/git
+	url = https://github.com/tpope/vim-git.git
