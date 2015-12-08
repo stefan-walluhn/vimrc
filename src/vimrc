@@ -43,3 +43,6 @@ let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
 
 " pyflakes
 "hi SpellBad ctermfg=yellow
+"
+" JavaScript indent
+let g:SimpleJsIndenter_BriefMode = 1
